@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue waves bg" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-ZA-Wvp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue waves bg" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-ZA-Wvp" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T-A-P-P-E-R" translatesAutoresizingMaskIntoConstraints="NO" id="bHB-PG-RCJ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T-A-P-P-E-R" translatesAutoresizingMaskIntoConstraints="NO" id="bHB-PG-RCJ" userLabel="Logo">
                                 <rect key="frame" x="146" y="53" width="309" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="7o3-Rg-rs6"/>
                                     <constraint firstAttribute="height" constant="66" id="Dhx-ca-Z8b"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-iY-P1P">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-iY-P1P" userLabel="PlayBtn">
                                 <rect key="frame" x="176" y="429" width="249" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="C3u-7c-jtG"/>
@@ -35,7 +35,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="playbtn"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLD-aP-Mak">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLD-aP-Mak" userLabel="TapCnt">
                                 <rect key="frame" x="176" y="363" width="249" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="pjG-GA-LLD"/>
@@ -44,9 +44,29 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8S-A9-R03" userLabel="CoinBtn">
+                                <rect key="frame" x="214" y="20" width="172" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="L5k-zi-sSx"/>
+                                    <constraint firstAttribute="height" constant="172" id="jeT-9d-0DP"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="coin"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P22-VN-M3D" userLabel="TapsLbl">
+                                <rect key="frame" x="119" y="259" width="363" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="jHm-ht-tiE"/>
+                                    <constraint firstAttribute="width" constant="363" id="kUG-Ef-R0m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="51"/>
+                                <color key="textColor" red="1" green="0.39043253254975718" blue="0.56293074584313429" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="P22-VN-M3D" firstAttribute="top" secondItem="r8S-A9-R03" secondAttribute="bottom" constant="67" id="8uM-AR-bhS"/>
+                            <constraint firstItem="r8S-A9-R03" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DND-LS-hPn"/>
                             <constraint firstItem="lyf-iY-P1P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNJ-RF-48C"/>
                             <constraint firstItem="bHB-PG-RCJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="Rza-75-tWp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lyf-iY-P1P" secondAttribute="bottom" constant="51" id="UWM-XU-yDY"/>
@@ -57,6 +77,8 @@
                             <constraint firstItem="mWc-ZA-Wvp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ahT-GO-nl4"/>
                             <constraint firstItem="mWc-ZA-Wvp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m5Z-VS-XHP"/>
                             <constraint firstItem="lyf-iY-P1P" firstAttribute="centerX" secondItem="TLD-aP-Mak" secondAttribute="centerX" id="t1O-sf-J7c"/>
+                            <constraint firstItem="P22-VN-M3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbI-Dw-YCo"/>
+                            <constraint firstItem="r8S-A9-R03" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yQI-7e-3b8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -68,6 +90,7 @@
     <resources>
         <image name="T-A-P-P-E-R" width="676" height="146"/>
         <image name="blue waves bg" width="1024" height="1024"/>
+        <image name="coin" width="244" height="268"/>
         <image name="playbtn" width="356" height="175"/>
     </resources>
 </document>
